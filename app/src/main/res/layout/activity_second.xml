@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#8BB1DC"
+    android:fitsSystemWindows="true">
+
+    <!-- Greeting & Summary Stats Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tvHello"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Hello [Name]!" />
+
+        <TextView
+            android:id="@+id/tvStats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:text="Tasks: 0 | Done: 0 | Points: 0" />
+    </LinearLayout>
+
+    <!-- Subject Filtering Spinner -->
+    <Spinner
+        android:id="@+id/spFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:minHeight="48dp" />
+
+    <!-- Action Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="Add Task"
+            android:backgroundTint="#3498DB"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="Log Out"
+            android:backgroundTint="#E74C3C"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Empty View State -->
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:text="No tasks to display" />
+
+    <!-- Task List Container -->
+    <ListView
+        android:id="@+id/lvTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:padding="16dp"
+    android:background="#8BB1DC"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="Homework Planner"/>
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:text="Welcome"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Name"
+        android:textStyle="bold"
+        android:backgroundTint="#3498DB"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textStyle="bold"
+        android:backgroundTint="#3498DB"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textStyle="bold"
+        android:backgroundTint="#3498DB"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp"/>
+
+
+    <Button
+        android:id="@+id/fullreset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E74C3C"
+        android:text="Full Reset"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:text="By Ariel G"/>
+
+</LinearLayout>
