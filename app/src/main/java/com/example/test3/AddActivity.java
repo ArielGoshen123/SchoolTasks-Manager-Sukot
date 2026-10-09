@@ -1,15 +1,19 @@
 package com.example.test3;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Calendar;
 
 public class AddActivity extends AppCompatActivity {
 
@@ -37,6 +41,10 @@ public class AddActivity extends AppCompatActivity {
 
         setupSpinners();
         setupListeners();
+
+        etDueDate.setOnClickListener(v -> {
+            showDatePicker();
+        });
     }
 
     private void setupSpinners() {
@@ -118,5 +126,14 @@ public class AddActivity extends AppCompatActivity {
         taskStorage.addTask(newTask);
         Toast.makeText(this, "Task saved successfully!", Toast.LENGTH_SHORT).show();
         finish(); //S3-S2
+    }
+    private void showDatePicker() {
+        Calendar c = Calendar.getInstance();
+        new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                etDueDate.setText(dayOfMonth + "-" + (month + 1) + "-" + year);
+            }
+        }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH)).show();
     }
 }
